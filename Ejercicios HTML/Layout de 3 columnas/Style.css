@@ -1,0 +1,90 @@
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+            background-color: #ecf0f1;
+        }
+
+        /* Estilos para las 3 columnas */
+        article {
+            flex: 2; /* El doble que las otras columnas */
+            background-color: #3498db;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav, aside {
+            flex: 1; /* Ancho igual para ambas */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        aside {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            font-size: 1.2rem;
+        }
+
+        /* Responsive: En pantallas pequeñas, las columnas se apilan */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            
+            article, nav, aside {
+                flex: none;
+                width: 100%;
+            }
+        }
+  
